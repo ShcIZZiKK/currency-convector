@@ -1,29 +1,35 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <div class="main">
+    <nav>
+      <router-link to="/">Список валют</router-link>
+      <router-link to="/convert">Конвертер</router-link>
+    </nav>
+    <router-view />
+  </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+@import "@/assets/styles/app.scss";
 
 nav {
-  padding: 30px;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  border-bottom: 1px solid $border;
 
   a {
-    font-weight: bold;
-    color: #2c3e50;
+    font-size: 16px;
+    font-weight: 700;
+    color: $black;
+    text-transform: uppercase;
+    text-decoration: none;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: $blue;
+    }
+
+    &:not(:last-child) {
+      margin-right: 20px;
     }
   }
 }

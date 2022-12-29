@@ -1,0 +1,10 @@
+@import "colors";
+
+@mixin select() {
+    padding: 10px 15px;
+    width: 100%;
+    border: 1px solid $dark-blue;
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 1;
+}

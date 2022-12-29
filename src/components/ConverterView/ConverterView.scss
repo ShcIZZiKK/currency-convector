@@ -1,0 +1,71 @@
+@import "@/assets/styles/colors.scss";
+@import "@/assets/styles/mixins.scss";
+
+.converter {
+    margin-top: 30px;
+}
+
+.converter__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: 768px) {
+        flex-wrap: nowrap;
+    }
+}
+
+.converter__column {
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+        width: 45%;
+    }
+
+    &.converter__column_position-middle {
+        margin: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (min-width: 768px) {
+            width: 10%;
+            margin: 0;
+        }
+    }
+}
+
+.converter__label {
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.converter__select {
+    @include select();
+}
+
+.converter__input-box {
+    margin-top: 10px;
+    padding: 20px;
+    border: 1px solid $lite-blue;
+}
+
+.converter__input-box-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 20px 0;
+    font-size: 30px;
+    color: $black;
+
+    &:disabled {
+        color: $black;
+    }
+}
+
+.converter__flip {
+    padding: 10px;
+    border: 1px solid $dark-blue;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
