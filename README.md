@@ -1,5 +1,7 @@
 # currency-convector
 
+#### **demo:** https://shcizzikk.github.io/currency-convector/
+
 ## Project setup
 ```
 npm install
